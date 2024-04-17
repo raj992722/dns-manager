@@ -3,17 +3,15 @@ import { v } from "convex/values";
 
 export default defineSchema({
     documents:defineTable({
-        address:v.string(),
-        ipv6_address:v.string(),
-        canonical_name:v.string(),
-        mail_exchange:v.string(),
-        name_server:v.string(),
-        pointer:v.string(),
-        start_of_authority:v.string(),
-        service:v.string(),
-        text:v.string(),
-        dnssec:v.string(),
+        name:v.string(),
+        email:v.string(),
+        designation:v.string(),
+        course:v.array(v.string()),
+        gender:v.string(),
+        image:v.string(),
+        phone:v.union(v.string(),v.number()),
         userId:v.string()
     })
     .index("by_user",["userId"])
+    .index("by_email",["email"])
 })

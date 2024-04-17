@@ -17,9 +17,9 @@ export default function MainLayout({children}:{children:React.ReactNode}){
         return redirect("/")
     }
     return (
-        <div className="h-full dark:bg-[#1F1F1F] flex">
+        <div className="h-full dark:bg-[#1F1F1F] flex overflow-hidden">
             <Navigation />
-            <main className="h-full overflow-y-auto flex-1">
+            <main className="h-full overflow-auto flex-1">
                 {children}
             </main>
         </div>

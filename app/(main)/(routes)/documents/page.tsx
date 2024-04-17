@@ -4,6 +4,8 @@ import { useUser } from "@clerk/clerk-react";
 import { PlusCircledIcon } from "@radix-ui/react-icons";
  import Image from "next/image";
 
+import Link from "next/link";
+
 const DocumentsPage= ()=>{
     const {user} = useUser();
     return (
@@ -27,10 +29,14 @@ const DocumentsPage= ()=>{
             <h2 className="text-lg font-medium">
                 Welcome to {user?.firstName}&apos;s DNS Manager
             </h2>
-            <Button>
+            <Button asChild>
+                <Link href="/create">
                 <PlusCircledIcon className="h-4 w-4 mr-2"/>
                 Create
+                </Link>
             </Button>
+            
+            
         </div>
     )
 }

@@ -7,6 +7,8 @@ import { ElementRef, useEffect, useRef, useState } from "react";
 
 import { useMediaQuery } from "usehooks-ts";
 import { UserItem } from "./user-item";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 
 export const Navigation =()=>{
@@ -78,8 +80,22 @@ export const Navigation =()=>{
             <div>
                <UserItem />
             </div>
-            <div className="mt-4">
-                <p>Documents</p>
+            <div className="mt-4 flex flex-col space-x-1 space-y-2 pl-3">
+                   <Button asChild variant="link">
+                <Link href="/documents" >
+                    Home
+                    </Link>
+                    </Button>
+                    <Button asChild variant="link">
+                <Link href="/employees" >
+                    Employees List
+                    </Link>
+                    </Button>
+                    <Button asChild >
+                <Link href="/create" >
+                    Create a employee
+                    </Link>
+                    </Button>
             </div>
             <div 
             className="opacity-0 group-hover/sidebar:opacity-100 
