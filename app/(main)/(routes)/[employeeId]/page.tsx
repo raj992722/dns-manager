@@ -71,7 +71,7 @@ const Employee = ({params}:{params:{employeeId:Id<"documents">}})=>{
 
         return (
             <Form {...form} >
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-2/3  shadow-md rounded-md p-2">
+            <form onSubmit={form.handleSubmit(onSubmit)}  className="space-y-8 w-2/3  shadow-md rounded-md p-2">
                 <FormField
                  control={form.control}
                 name="name"
